@@ -27,3 +27,7 @@ Los recursos visuales se encuentran dentro de `prototipo/assets/`, los estilos e
 ## Alcance y límites
 
 Esta es exclusivamente una maqueta frontend. No incluye backend, base de datos, autenticación real, persistencia de información, cálculos financieros ni transacciones. Las validaciones suceden localmente en el navegador; ningún dato se envía o guarda. Los saldos y movimientos que aparecen son ficticios. **No ingreses información personal ni contraseñas reales.**
+
+## Relación con la aplicación principal
+
+Esta carpeta conserva la maqueta de la primera entrega sin reemplazarla. La aplicación principal con clases, autenticación simulada, transacciones y persistencia se mantiene separada en [`../../app/`](../../app/), por lo que el docente puede revisar las dos etapas.

@@ -1,0 +1,10 @@
+{
+  "name": "mi-plata-app-academica",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Simulador académico de sistema bancario con JavaScript y POO, sin backend ni dependencias externas.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

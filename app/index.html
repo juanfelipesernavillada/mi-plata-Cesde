@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100912">
+  <meta name="description" content="Sistema Bancario Mi Plata: simulador académico de POO, usuarios y operaciones bancarias en JavaScript.">
+  <title>Mi Plata — Sistema bancario académico</title>
+  <link rel="icon" href="assets/mi-plata-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="disclaimer-bar"><span class="status-dot"></span> PROYECTO ACADÉMICO · NO ES UN BANCO REAL · USA SOLO DATOS DE PRUEBA</div>
+
+  <header class="public-header" id="publicHeader">
+    <a class="brand" href="#inicio" data-screen="home" aria-label="Mi Plata, inicio">
+      <img src="assets/mi-plata-mark.svg" alt="" width="42" height="42">
+      <span>MI <b>PLATA</b></span>
+    </a>
+    <nav class="public-nav" aria-label="Navegación pública">
+      <button data-screen="home" class="public-link active">Inicio</button>
+      <button data-screen="products" class="public-link">Productos</button>
+      <button data-anchor="about" class="public-link">Nosotros</button>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-quiet" data-screen="login">Ingresar</button>
+      <button class="btn btn-primary" data-screen="register">Registrarse <span aria-hidden="true">↗</span></button>
+    </div>
+    <button class="mobile-menu" id="publicMenuToggle" aria-label="Abrir navegación" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="publicApp">
+    <section class="public-screen active" data-screen-view="home" id="screenHome">
+      <div class="hero wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> FINANZAS CON MÁS CLARIDAD</div>
+          <h1>Tu dinero,<br><span class="gradient-text">tu control.</span><br>Sin límites.</h1>
+          <p>Una experiencia bancaria académica para administrar productos, explorar operaciones y entender cómo interactúan las reglas de negocio.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" data-screen="register">Crear usuario <span>↗</span></button>
+            <button class="btn btn-outline btn-lg" data-screen="products">Conocer productos <span>→</span></button>
+          </div>
+          <div class="hero-footnote"><span class="check-bubble">✓</span> Una aplicación responsive desarrollada con JavaScript y POO.</div>
+        </div>
+        <div class="hero-card-stage" aria-label="Ilustración de una tarjeta ficticia">
+          <div class="glow glow-a"></div><div class="glow glow-b"></div>
+          <div class="floating-note note-one">✦ Gestión clara</div>
+          <div class="bank-card-art">
+            <div class="bank-card-top"><span class="chip"><i></i><i></i><i></i><i></i></span><span>MI PLATA<br><small>FINANCIAL · DEMO</small></span></div>
+            <div class="bank-card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 4829</div>
+            <div class="bank-card-bottom"><div><small>TITULAR DE PRUEBA</small><b>USUARIO DEMO</b></div><span class="card-circles"><i></i><i></i></span></div>
+          </div>
+          <div class="floating-note note-two"><span class="live-dot"></span><span><b>Datos de ejemplo</b><small>Sin transacciones reales</small></span></div>
+          <div class="hero-label">DISEÑADO PARA APRENDER <span>✳</span></div>
+        </div>
+      </div>
+      <section class="wrap intro-section" id="about">
+        <div class="section-intro"><div class="eyebrow">APRENDER HACIENDO</div><h2>Diseño intuitivo.<br><span class="gradient-text">Reglas transparentes.</span></h2><p>Mi Plata conecta una interfaz web con un modelo de clases y reglas de negocio implementadas en JavaScript.</p></div>
+        <div class="intro-grid">
+          <article class="intro-card"><span>01</span><h3>Programación orientada a objetos</h3><p>Herencia, encapsulamiento, abstracción y polimorfismo en productos bancarios.</p></article>
+          <article class="intro-card"><span>02</span><h3>Operaciones demostrables</h3><p>Consignar, retirar, transferir, comprar a cuotas y consultar movimientos.</p></article>
+          <article class="intro-card"><span>03</span><h3>Acceso por roles</h3><p>Clientes y panel administrativo dentro de una simulación local.</p></article>
+        </div>
+      </section>
+      <section class="wrap note-section"><div><div class="eyebrow">IMPORTANTE</div><h2>Un simulador, no un servicio financiero.</h2><p>Los saldos, cupos y usuarios iniciales son ficticios. La información se guarda en el navegador mediante localStorage para fines académicos.</p></div><button class="btn btn-primary" data-screen="login">Entrar a la demostración →</button></section>
+    </section>
+
+    <section class="public-screen auth-screen" data-screen-view="products" id="screenProducts">
+      <div class="wrap page-heading"><div class="eyebrow">PORTAFOLIO ACADÉMICO</div><h1>Productos Mi Plata</h1><p>Estos productos modelan las reglas incluidas en la guía del proyecto CESDE.</p></div>
+      <div class="wrap public-products-grid">
+        <article class="public-product"><span class="product-icon savings">◫</span><small>PRODUCTO 01</small><h2>Cuenta de ahorros</h2><p>Consignaciones, retiros, saldo y liquidación de interés al retirar conforme al supuesto académico.</p><div class="product-meta">Tasa de referencia del enunciado: 1,5 % mensual.</div></article>
+        <article class="public-product"><span class="product-icon checking">⇄</span><small>PRODUCTO 02</small><h2>Cuenta corriente</h2><p>Operaciones de ingreso y retiro con el sobregiro máximo descrito en la guía.</p><div class="product-meta">Sobregiro simulado: hasta 20 % del saldo positivo.</div></article>
+        <article class="public-product"><span class="product-icon credit">▱</span><small>PRODUCTO 03</small><h2>Tarjeta de crédito</h2><p>Compras a cuotas, consulta de cupo, valor mensual y pago de cuotas desde una cuenta.</p><div class="product-meta">El cupo demo se asigna desde el panel administrativo.</div></article>
+      </div>
+      <p class="wrap legal-note">Las tasas del ejercicio son reglas pedagógicas y se aplican según la tabla del profesor, incluida la tasa del 2,3 % mensual para 7 o más cuotas. No representa una oferta de crédito real ni una validación jurídica de una operación financiera.</p>
+      <div class="wrap centered-actions"><button class="btn btn-primary btn-lg" data-screen="register">Crear usuario de prueba →</button></div>
+    </section>
+
+    <section class="public-screen auth-screen" data-screen-view="register" id="screenRegister">
+      <div class="wrap auth-layout">
+        <aside class="auth-aside"><div class="eyebrow">BIENVENIDO A MI PLATA</div><h1>Empieza a tener<br><span class="gradient-text">el control.</span></h1><p>Registra un usuario de prueba para explorar los módulos. No uses contraseñas ni información personal real.</p><div class="auth-aside-note"><span class="note-symbol">✦</span><span><b>Cuenta académica</b><small>Los datos solo se guardan en este navegador.</small></span></div></aside>
+        <div class="form-card">
+          <div class="form-heading"><div class="form-mark">M</div><div><h2>Crear usuario</h2><p>Todos los campos son obligatorios.</p></div></div>
+          <form id="registerForm" autocomplete="off">
+            <div class="field"><label for="regIdentification">Número de identificación</label><input id="regIdentification" name="identificacion" maxlength="30" required placeholder="Identificación de prueba"></div>
+            <div class="field"><label for="regFullName">Nombre completo</label><input id="regFullName" name="nombreCompleto" maxlength="80" required placeholder="Nombre de demostración"></div>
+            <div class="field-row"><div class="field"><label for="regPhone">Celular</label><input id="regPhone" name="celular" type="tel" maxlength="20" required placeholder="3000000000"></div><div class="field"><label for="regUsername">Nombre de usuario</label><input id="regUsername" name="nombreUsuario" minlength="3" maxlength="30" required placeholder="usuario_demo"></div></div>
+            <div class="field-row"><div class="field"><label for="regPassword">Contraseña</label><input id="regPassword" name="contrasena" type="password" minlength="8" required placeholder="Mínimo 8 caracteres"></div><div class="field"><label for="regConfirm">Confirmar contraseña</label><input id="regConfirm" name="confirmarContrasena" type="password" minlength="8" required placeholder="Repite la contraseña"></div></div>
+            <p class="privacy-line">Las contraseñas se derivan con PBKDF2 antes de guardarse. Aun así, este proyecto no reemplaza una autenticación de servidor.</p>
+            <div class="form-feedback" id="registerFeedback" role="status" aria-live="polite"></div>
+            <button class="btn btn-primary btn-full" type="submit">Crear usuario y productos de prueba <span>→</span></button>
+          </form>
+          <p class="form-switch">¿Ya tienes usuario? <button class="text-button" data-screen="login">Iniciar sesión</button></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-screen auth-screen" data-screen-view="login" id="screenLogin">
+      <div class="wrap auth-layout login-layout">
+        <aside class="auth-aside"><div class="eyebrow">TU ESPACIO DIGITAL</div><h1>Qué bueno<br><span class="gradient-text">tenerte aquí.</span></h1><p>Ingresa con una de las credenciales de demostración o con un usuario que hayas registrado.</p><div class="security-note"><span class="security-icon">⌑</span><span><b>Control de intentos</b><small>El tercer fallo bloquea el usuario hasta que lo desbloquee un administrador.</small></span></div></aside>
+        <div class="form-card login-card">
+          <div class="form-heading"><div class="form-mark">M</div><div><h2>Iniciar sesión</h2><p>Acceso de prueba.</p></div></div>
+          <form id="loginForm" autocomplete="off">
+            <div class="field"><label for="loginUsername">Nombre de usuario</label><input id="loginUsername" name="usuario" required placeholder="admin o cliente1"></div>
+            <div class="field"><label for="loginPassword">Contraseña</label><input id="loginPassword" name="contrasena" type="password" required placeholder="Contraseña de demostración"></div>
+            <div class="attempt-box"><div><span>Intentos fallidos</span><b id="loginAttempts">0 / 3</b></div><div class="attempt-track"><span id="loginAttemptBar"></span></div></div>
+            <div class="form-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
+            <button class="btn btn-primary btn-full" type="submit">Ingresar <span>→</span></button>
+          </form>
+          <div class="demo-credentials"><div class="credential-heading"><b>Credenciales precargadas</b><small>Pulsa una para completar el formulario.</small></div><button type="button" class="credential-item" data-fill-login="admin|Admin123!"><span><b>Administrador</b><small>admin</small></span><span>Usar →</span></button><button type="button" class="credential-item" data-fill-login="cliente1|Cliente123!"><span><b>Cliente de prueba 1</b><small>cliente1</small></span><span>Usar →</span></button><button type="button" class="credential-item" data-fill-login="cliente2|Cliente123!"><span><b>Cliente de prueba 2</b><small>cliente2</small></span><span>Usar →</span></button></div>
+          <button type="button" id="resetDemoButton" class="text-button reset-demo">Restablecer todos los datos de demostración</button>
+          <p class="form-switch">¿Nuevo aquí? <button class="text-button" data-screen="register">Crear usuario</button></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="app-shell" id="appShell" hidden>
+    <aside class="app-sidebar" id="appSidebar">
+      <a class="brand sidebar-brand" href="#panel" data-panel="overview"><img src="assets/mi-plata-mark.svg" alt="" width="39" height="39"><span>MI <b>PLATA</b></span></a>
+      <div class="sidebar-label">MENÚ PRINCIPAL</div>
+      <nav class="sidebar-nav" aria-label="Panel bancario">
+        <button data-panel="overview" class="side-link active"><span>◫</span>Resumen</button>
+        <button data-panel="balance" class="side-link"><span>$</span>Consultar saldo</button>
+        <button data-panel="products" class="side-link"><span>▤</span>Mis productos</button>
+        <button data-panel="deposit" class="side-link"><span>＋</span>Consignar</button>
+        <button data-panel="withdraw" class="side-link"><span>↗</span>Retirar</button>
+        <button data-panel="transfer" class="side-link"><span>⇄</span>Transferir</button>
+        <button data-panel="card" class="side-link"><span>▱</span>Tarjeta de crédito</button>
+        <button data-panel="movements" class="side-link"><span>≋</span>Movimientos</button>
+        <button data-panel="profile" class="side-link"><span>♙</span>Perfil y seguridad</button>
+        <button data-panel="admin" class="side-link admin-only" id="adminNavItem" hidden><span>⚙</span>Administración</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-demo"><span class="status-dot"></span><div><b>Modo académico</b><small>Datos en este navegador</small></div></div><button class="side-logout" id="logoutButton"><span>↪</span>Cerrar sesión</button></div>
+    </aside>
+    <div class="app-main">
+      <header class="app-topbar"><button id="sidebarToggle" class="sidebar-toggle" aria-label="Abrir menú">☰</button><div><span class="topbar-kicker">SISTEMA BANCARIO</span><h2 id="panelTitle">Resumen general</h2></div><div class="topbar-user"><span class="avatar" id="topbarAvatar">MP</span><span><b id="topbarName">Usuario</b><small id="topbarRole">Cliente</small></span></div></header>
+      <main class="panel-content">
+        <section class="app-panel active" data-panel-view="overview">
+          <div class="panel-welcome"><div><div class="eyebrow">TU ESPACIO PERSONAL</div><h1>Hola, <span class="gradient-text" id="welcomeName">Usuario</span></h1><p>Este resumen se construye con los productos y movimientos guardados en esta demostración.</p></div><span class="demo-pill"><span class="status-dot"></span> SIMULACIÓN LOCAL</span></div>
+          <div class="summary-grid"><article class="summary-card balance-summary"><div class="summary-card-heading"><span>Saldo en cuentas</span><span class="summary-icon">◈</span></div><div id="totalBalance" class="summary-value">$ 0</div><small>Cuenta de ahorros + cuenta corriente</small></article><article class="summary-card"><div class="summary-card-heading"><span>Productos activos</span><span class="summary-icon">▤</span></div><div id="productsCount" class="summary-value">0</div><small>Cuentas y tarjetas asociadas</small></article><article class="summary-card"><div class="summary-card-heading"><span>Cupo disponible</span><span class="summary-icon">▱</span></div><div id="creditAvailable" class="summary-value">$ 0</div><small>Tarjetas de crédito propias</small></article></div>
+          <div class="section-row-heading"><div><div class="eyebrow">VISTA RÁPIDA</div><h2>Mis productos</h2></div><button class="text-button" data-panel="products">Ver todos →</button></div><div id="overviewProducts" class="product-card-grid"></div>
+          <div class="section-row-heading"><div><div class="eyebrow">ACTIVIDAD RECIENTE</div><h2>Últimos movimientos</h2></div><button class="text-button" data-panel="movements">Ver historial →</button></div><div id="overviewMovements" class="movement-table-wrap"></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="balance">
+          <div class="panel-heading"><div><div class="eyebrow">CONSULTA</div><h1>Consultar saldo</h1><p>Selecciona una cuenta para ver su saldo actual y el disponible según sus reglas.</p></div></div>
+          <div class="operation-layout"><div class="form-card operation-card"><div class="field"><label for="balanceProduct">Cuenta bancaria</label><select id="balanceProduct" required></select></div><div id="balanceResult" class="balance-result"><span>Saldo actual</span><b>Selecciona una cuenta</b></div><button type="button" class="btn btn-primary btn-full" id="refreshBalanceButton">Consultar saldo →</button></div><aside class="operation-aside"><span class="aside-symbol">◈</span><h3>Saldo y disponible</h3><p>El saldo representa el balance contable simulado. En cuenta corriente, el disponible incluye el sobregiro académico permitido. La tarjeta tiene su propia sección para cupo y deuda.</p><div class="operation-rule">Consulta de solo lectura: no registra un movimiento.</div></aside></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="products">
+          <div class="panel-heading"><div><div class="eyebrow">PORTAFOLIO PERSONAL</div><h1>Mis productos</h1><p>Consulta el saldo, cupo disponible e información de cada producto.</p></div></div>
+          <div id="allProducts" class="product-card-grid"></div>
+          <div class="info-callout"><b>Sobre los valores:</b> los saldos y cupos de los usuarios precargados son ficticios. En un banco real, la apertura, la remuneración y la asignación de cupos dependen de las condiciones del producto y de los procesos de la entidad.</div>
+        </section>
+
+        <section class="app-panel" data-panel-view="deposit">
+          <div class="panel-heading"><div><div class="eyebrow">OPERACIONES</div><h1>Consignar dinero</h1><p>Registra un abono a una cuenta propia.</p></div></div>
+          <div class="operation-layout"><div class="form-card operation-card"><form id="depositForm"><div class="field"><label for="depositProduct">Cuenta de destino</label><select id="depositProduct" required></select></div><div class="field"><label for="depositAmount">Valor de consignación (COP)</label><input id="depositAmount" type="number" min="1" step="1" required placeholder="Ej. 100000"></div><p class="privacy-line">El valor debe ser un número entero de pesos mayor que cero.</p><button class="btn btn-primary btn-full" type="submit">Confirmar consignación →</button><div class="form-feedback" id="depositFeedback" role="status" aria-live="polite"></div></form></div><aside class="operation-aside"><span class="aside-symbol">＋</span><h3>Abonos a tu cuenta</h3><p>La operación actualiza el saldo y agrega un movimiento con fecha, tipo y valor al historial.</p><div class="operation-rule">Regla: monto entero > $ 0</div></aside></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="withdraw">
+          <div class="panel-heading"><div><div class="eyebrow">OPERACIONES</div><h1>Retirar dinero</h1><p>Las reglas de saldo y sobregiro se validan según la clase de cuenta.</p></div></div>
+          <div class="operation-layout"><div class="form-card operation-card"><form id="withdrawForm"><div class="field"><label for="withdrawProduct">Cuenta de origen</label><select id="withdrawProduct" required></select></div><div class="field"><label for="withdrawAmount">Valor a retirar (COP)</label><input id="withdrawAmount" type="number" min="1" step="1" required placeholder="Ej. 80000"></div><div id="withdrawRule" class="rule-preview"></div><button class="btn btn-primary btn-full" type="submit">Confirmar retiro →</button><div class="form-feedback" id="withdrawFeedback" role="status" aria-live="polite"></div></form></div><aside class="operation-aside"><span class="aside-symbol">↗</span><h3>Validaciones automáticas</h3><p>La cuenta de ahorros liquida el interés acumulado al retirar. La cuenta corriente admite el sobregiro indicado en el enunciado.</p><div class="operation-rule">Revisa el saldo y el disponible antes de confirmar.</div></aside></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="transfer">
+          <div class="panel-heading"><div><div class="eyebrow">OPERACIONES</div><h1>Transferir dinero</h1><p>Envía dinero a otra cuenta activa; puede pertenecer al mismo cliente o a otro usuario.</p></div></div>
+          <div class="operation-layout"><div class="form-card operation-card"><form id="transferForm"><div class="field"><label for="transferOrigin">Cuenta de origen</label><select id="transferOrigin" required></select></div><div class="field"><label for="transferDestination">Cuenta de destino</label><select id="transferDestination" required></select></div><div class="field"><label for="transferAmount">Valor (COP)</label><input id="transferAmount" type="number" min="1" step="1" required placeholder="Ej. 50000"></div><button class="btn btn-primary btn-full" type="submit">Realizar transferencia →</button><div class="form-feedback" id="transferFeedback" role="status" aria-live="polite"></div></form></div><aside class="operation-aside"><span class="aside-symbol">⇄</span><h3>Transferencias con trazabilidad</h3><p>Se registra un movimiento de salida en la cuenta de origen y otro de entrada en la cuenta destino con la misma referencia.</p><div class="operation-rule">No se permite usar el mismo producto como origen y destino.</div></aside></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="card">
+          <div class="panel-heading"><div><div class="eyebrow">FINANCIACIÓN SIMULADA</div><h1>Tarjeta de crédito</h1><p>Compra a cuotas, consulta tu pago mensual estimado y registra el pago de una cuota.</p></div></div>
+          <div id="creditSummary" class="credit-summary-grid"></div>
+          <div class="two-form-grid"><div class="form-card"><div class="form-heading"><div class="form-mark">▱</div><div><h2>Registrar compra</h2><p>Elige la tarjeta, el valor y el número de cuotas.</p></div></div><form id="purchaseForm"><div class="field"><label for="purchaseCard">Tarjeta</label><select id="purchaseCard" required></select></div><div class="field"><label for="purchaseDescription">Descripción</label><input id="purchaseDescription" required maxlength="80" placeholder="Ej. Compra de ejemplo"></div><div class="field-row"><div class="field"><label for="purchaseAmount">Valor (COP)</label><input id="purchaseAmount" type="number" min="1" step="1" required placeholder="250000"></div><div class="field"><label for="purchaseInstallments">Cuotas</label><input id="purchaseInstallments" type="number" min="1" step="1" value="3" required></div></div><div id="purchasePreview" class="rule-preview">Ingresa el valor y las cuotas para estimar el pago mensual.</div><button class="btn btn-primary btn-full" type="submit">Registrar compra →</button><div class="form-feedback" id="purchaseFeedback" role="status" aria-live="polite"></div></form></div>
+          <div class="form-card"><div class="form-heading"><div class="form-mark">✓</div><div><h2>Pagar una cuota</h2><p>El pago se debita de una cuenta propia.</p></div></div><form id="payInstallmentForm"><div class="field"><label for="paymentCard">Tarjeta</label><select id="paymentCard" required></select></div><div class="field"><label for="paymentPurchase">Compra con cuota pendiente</label><select id="paymentPurchase" required></select></div><div class="field"><label for="paymentSource">Pagar desde la cuenta</label><select id="paymentSource" required></select></div><div id="paymentPreview" class="rule-preview">Selecciona una compra para ver el valor de la cuota.</div><button class="btn btn-primary btn-full" type="submit">Pagar cuota seleccionada →</button><div class="form-feedback" id="paymentFeedback" role="status" aria-live="polite"></div></form></div></div>
+          <div class="section-row-heading"><div><div class="eyebrow">PLANES DE PAGO</div><h2>Compras registradas</h2></div></div><div id="creditPurchases" class="purchase-list"></div>
+          <p class="legal-note">Las tasas de 1,9 % y 2,3 % proceden de la guía académica. Se implementan exactamente para cumplir el ejercicio; consulta `app/README.md` para la advertencia legal sobre su uso en productos financieros reales.</p>
+        </section>
+
+        <section class="app-panel" data-panel-view="movements">
+          <div class="panel-heading"><div><div class="eyebrow">TRAZABILIDAD</div><h1>Historial de movimientos</h1><p>Los movimientos se ordenan de la fecha más reciente a la más antigua.</p></div></div>
+          <div class="filter-row"><label for="movementFilter">Filtrar por producto</label><select id="movementFilter"><option value="all">Todos mis productos</option></select></div><div id="movementTable" class="movement-table-wrap"></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="profile">
+          <div class="panel-heading"><div><div class="eyebrow">DATOS PERSONALES</div><h1>Perfil y seguridad</h1><p>Actualiza tus datos y cambia la contraseña usada para esta demostración.</p></div></div>
+          <div class="two-form-grid"><div class="form-card"><div class="form-heading"><div class="form-mark">♙</div><div><h2>Editar perfil</h2><p>Todos los campos del registro.</p></div></div><form id="profileForm"><div class="field"><label for="profileIdentification">Identificación</label><input id="profileIdentification" required maxlength="30"></div><div class="field"><label for="profileName">Nombre completo</label><input id="profileName" required maxlength="80"></div><div class="field"><label for="profilePhone">Celular</label><input id="profilePhone" required maxlength="20"></div><div class="field"><label for="profileUsername">Nombre de usuario</label><input id="profileUsername" required minlength="3" maxlength="30"></div><button class="btn btn-primary btn-full" type="submit">Guardar perfil →</button><div class="form-feedback" id="profileFeedback" role="status" aria-live="polite"></div></form></div>
+          <div class="form-card"><div class="form-heading"><div class="form-mark">⌑</div><div><h2>Cambiar contraseña</h2><p>Se valida el usuario, clave actual y confirmación.</p></div></div><form id="passwordForm"><div class="field"><label for="passwordUsername">Usuario</label><input id="passwordUsername" required></div><div class="field"><label for="passwordCurrent">Contraseña actual</label><input id="passwordCurrent" type="password" required></div><div class="field"><label for="passwordNew">Nueva contraseña</label><input id="passwordNew" type="password" minlength="8" required></div><div class="field"><label for="passwordConfirm">Confirmar nueva contraseña</label><input id="passwordConfirm" type="password" minlength="8" required></div><button class="btn btn-primary btn-full" type="submit">Guardar nueva contraseña →</button><div class="form-feedback" id="passwordFeedback" role="status" aria-live="polite"></div></form></div></div>
+        </section>
+
+        <section class="app-panel" data-panel-view="admin">
+          <div class="panel-heading"><div><div class="eyebrow">SOLO ADMINISTRACIÓN</div><h1>Panel administrativo</h1><p>Gestiona usuarios y productos ficticios. Las acciones quedan guardadas en el navegador local.</p></div><span class="demo-pill">ROL ADMINISTRADOR</span></div>
+          <div class="admin-stats" id="adminStats"></div>
+          <div class="admin-layout"><div class="form-card"><div class="form-heading"><div class="form-mark">＋</div><div><h2>Crear usuario</h2><p>Los usuarios nuevos se crean como clientes.</p></div></div><form id="adminCreateUserForm"><div class="field"><label for="adminNewIdentification">Identificación ficticia</label><input id="adminNewIdentification" required maxlength="30"></div><div class="field"><label for="adminNewName">Nombre completo</label><input id="adminNewName" required maxlength="80"></div><div class="field-row"><div class="field"><label for="adminNewPhone">Celular</label><input id="adminNewPhone" required maxlength="20"></div><div class="field"><label for="adminNewUsername">Usuario</label><input id="adminNewUsername" required minlength="3" maxlength="30"></div></div><div class="field-row"><div class="field"><label for="adminNewPassword">Contraseña temporal</label><input id="adminNewPassword" type="password" minlength="8" required></div><div class="field"><label for="adminNewConfirm">Confirmar contraseña</label><input id="adminNewConfirm" type="password" minlength="8" required></div></div><button class="btn btn-primary btn-full" type="submit">Crear cliente →</button><div class="form-feedback" id="adminCreateFeedback" role="status" aria-live="polite"></div></form></div>
+          <div class="form-card"><div class="form-heading"><div class="form-mark">✎</div><div><h2>Editar usuario</h2><p>Selecciona un usuario de la tabla para cargar sus datos.</p></div></div><form id="adminEditUserForm"><input id="adminEditId" type="hidden"><div class="field"><label for="adminEditIdentification">Identificación</label><input id="adminEditIdentification" required maxlength="30"></div><div class="field"><label for="adminEditName">Nombre completo</label><input id="adminEditName" required maxlength="80"></div><div class="field-row"><div class="field"><label for="adminEditPhone">Celular</label><input id="adminEditPhone" required maxlength="20"></div><div class="field"><label for="adminEditUsername">Usuario</label><input id="adminEditUsername" required minlength="3" maxlength="30"></div></div><div class="field"><label for="adminEditPassword">Restablecer contraseña (opcional)</label><input id="adminEditPassword" type="password" minlength="8" placeholder="Déjalo vacío para conservarla"></div><button class="btn btn-primary btn-full" type="submit">Guardar cambios →</button><div class="form-feedback" id="adminEditFeedback" role="status" aria-live="polite"></div></form></div></div>
+          <div class="section-row-heading"><div><div class="eyebrow">USUARIOS</div><h2>Administrar cuentas de usuario</h2></div></div><div id="adminUsersTable" class="movement-table-wrap"></div>
+          <div class="section-row-heading"><div><div class="eyebrow">PRODUCTOS</div><h2>Crear producto o asignar valores demo</h2></div></div><div class="admin-layout"><div class="form-card"><div class="form-heading"><div class="form-mark">▤</div><div><h2>Crear producto</h2><p>El saldo o cupo inicial es ficticio.</p></div></div><form id="adminCreateProductForm"><div class="field"><label for="adminProductOwner">Titular</label><select id="adminProductOwner" required></select></div><div class="field"><label for="adminProductType">Tipo de producto</label><select id="adminProductType" required><option value="CuentaAhorros">Cuenta de ahorros</option><option value="CuentaCorriente">Cuenta corriente</option><option value="TarjetaCredito">Tarjeta de crédito</option></select></div><div class="field"><label for="adminProductAlias">Nombre o alias</label><input id="adminProductAlias" maxlength="60" placeholder="Ej. Cuenta para gastos"></div><div class="field"><label for="adminProductValue">Saldo inicial o cupo ficticio (COP)</label><input id="adminProductValue" type="number" min="0" step="1" required value="0"></div><button class="btn btn-primary btn-full" type="submit">Crear producto →</button><div class="form-feedback" id="adminCreateProductFeedback" role="status" aria-live="polite"></div></form></div>
+          <div class="form-card"><div class="form-heading"><div class="form-mark">⚙</div><div><h2>Ajustar un producto</h2><p>Solo para preparar escenarios de evaluación.</p></div></div><form id="adminAdjustProductForm"><div class="field"><label for="adminExistingProduct">Producto</label><select id="adminExistingProduct" required></select></div><div class="field"><label for="adminAdjustValue">Nuevo saldo o cupo (COP)</label><input id="adminAdjustValue" type="number" min="0" step="1" required></div><button class="btn btn-primary btn-full" type="submit">Guardar ajuste demo →</button><button class="btn btn-danger btn-full" type="button" id="adminDeleteProductButton">Eliminar producto seleccionado</button><div class="form-feedback" id="adminAdjustFeedback" role="status" aria-live="polite"></div></form></div></div>
+          <p class="legal-note">Los permisos administrativos se implementan en el código de cliente y pueden alterarse desde las herramientas del navegador. Esto es válido para una práctica frontend local, pero no equivale a autorización segura del lado servidor.</p>
+        </section>
+        <div id="globalNotice" class="global-notice" role="status" aria-live="polite"></div>
+      </main>
+      <footer class="app-footer"><span>© 2026 Mi Plata · Proyecto de aula CESDE</span><span>Simulación local · No realizar operaciones reales</span></footer>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
