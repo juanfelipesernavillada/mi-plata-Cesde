@@ -1,0 +1,20 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs y archivos temporales
+*.log
+*.tmp
+
+# Dependencias (si se incorporan más adelante)
+node_modules/
+
+# Entornos locales
+.env
+.env.*
+!.env.example

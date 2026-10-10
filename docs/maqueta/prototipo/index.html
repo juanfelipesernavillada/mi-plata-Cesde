@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100912">
+  <meta name="description" content="Maqueta académica frontend de Mi Plata, una propuesta de banca digital.">
+  <title>Mi Plata — Tu dinero, tu control</title>
+  <link rel="icon" href="assets/mi-plata-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="demo-banner"><span class="demo-dot"></span> PROTOTIPO ACADÉMICO · No es un servicio bancario real · No ingreses datos personales</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" data-view="home" aria-label="Mi Plata, inicio">
+      <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><rect x="2" y="2" width="24" height="24" rx="8" fill="currentColor" opacity=".18"/><path d="M8 8h12v3H11v3h7v3h-7v3H8z" fill="currentColor"/><circle cx="20" cy="20" r="2" fill="#f04b7b"/></svg></span>
+      <span>MI <b>PLATA</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir navegación" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#inicio" data-view="home" class="nav-link active">Inicio</a>
+      <a href="#productos" data-view="products" class="nav-link">Productos</a>
+      <a href="#nosotros" data-anchor="about" class="nav-link">Nosotros</a>
+      <a href="#contacto" data-anchor="contact" class="nav-link">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-small" data-view="login">Ingresar</button>
+      <button class="btn btn-primary btn-small" data-view="register">Registrarse <span aria-hidden="true">↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-view active" id="view-home" data-page="home">
+      <div class="hero section-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> UNA FORMA MÁS SIMPLE DE MANEJAR TU DINERO</div>
+          <h1>Tu dinero,<br><span class="gradient-text">tu control.</span><br>Sin límites.</h1>
+          <p class="hero-lede">Una propuesta de banca digital diseñada para que tengas tus finanzas más claras, organizadas y siempre a la mano.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-large" data-view="register">Abrir cuenta <span aria-hidden="true">↗</span></button>
+            <button class="btn btn-outline btn-large" data-anchor="about">Conoce más <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="hero-proof"><span class="proof-icon">✓</span><span>Una experiencia digital clara, desde cualquier dispositivo.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración decorativa de una tarjeta bancaria">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-grid"></div>
+          <div class="floating-label label-top"><span class="tiny-spark">✦</span> Finanzas a tu manera</div>
+          <div class="bank-card" aria-hidden="true">
+            <div class="card-top"><span class="card-chip"><i></i><i></i><i></i><i></i></span><span class="card-type">MI PLATA<br><small>FINANCIAL</small></span></div>
+            <div class="contactless">)))</div>
+            <div class="card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 4829</div>
+            <div class="card-bottom"><div><span class="card-caption">TITULAR</span><strong>USUARIO DEMO</strong></div><div><span class="card-caption">VENCE</span><strong>08/29</strong></div><span class="card-mark"><i></i><i></i></span></div>
+          </div>
+          <div class="floating-label label-bottom"><span class="activity-pulse"></span><div><strong>Todo más claro</strong><small>Tu panorama financiero</small></div></div>
+          <div class="art-caption">DISEÑADO PARA TU DÍA A DÍA <span>✳</span></div>
+        </div>
+      </div>
+      <div class="trust-strip section-wrap"><div><span class="strip-number">01</span><span>Una experiencia intuitiva</span></div><div><span class="strip-number">02</span><span>Diseño pensado para ti</span></div><div><span class="strip-number">03</span><span>Acceso desde tus dispositivos</span></div></div>
+      <section class="feature-section section-wrap" id="about">
+        <div class="section-heading"><div class="eyebrow">MÁS CLARIDAD, MENOS VUELTAS</div><h2>Tu vida se mueve.<br><span class="gradient-text">Tu plata también.</span></h2><p>Mi Plata propone una experiencia desde la que podrás visualizar tus productos y organizar tus consultas en un solo lugar.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon violet">◈</span><h3>Todo en un lugar</h3><p>Una vista conceptual para consultar tus productos bancarios sin perderte entre pantallas.</p><span class="feature-index">01 / ORGANIZA</span></article>
+          <article class="feature-card"><span class="feature-icon rose">↗</span><h3>Información más clara</h3><p>Una distribución sencilla que te ayuda a identificar saldos, productos y movimientos.</p><span class="feature-index">02 / COMPRENDE</span></article>
+          <article class="feature-card"><span class="feature-icon pink">⌁</span><h3>Diseñado para ti</h3><p>Interfaz adaptable a computador, tableta y celular para acompañar tu rutina.</p><span class="feature-index">03 / CONECTA</span></article>
+        </div>
+      </section>
+      <section class="cta-section section-wrap" id="contact">
+        <div><div class="eyebrow">TU PRÓXIMO PASO</div><h2>Una nueva forma de ver<br>tus finanzas.</h2><p>Explora la propuesta de Mi Plata en esta maqueta demostrativa.</p></div>
+        <button class="btn btn-primary btn-large" data-view="products">Explorar productos <span aria-hidden="true">→</span></button>
+      </section>
+    </section>
+
+    <section class="page-view inner-page" id="view-register" data-page="register">
+      <div class="auth-layout section-wrap">
+        <aside class="auth-aside"><div class="eyebrow">BIENVENIDO A MI PLATA</div><h1>Empieza a tener<br><span class="gradient-text">el control.</span></h1><p>Esta pantalla muestra los campos propuestos para un futuro registro. La maqueta no crea usuarios ni almacena información.</p><div class="aside-stat"><span class="stat-icon">✦</span><div><strong>Tu espacio, a tu manera</strong><small>Una experiencia simple y digital</small></div></div><div class="aside-decoration"></div></aside>
+        <div class="form-panel"><div class="form-heading"><div class="form-mark">M</div><div><h2>Crear cuenta</h2><p>Completa los campos de ejemplo para revisar el formulario.</p></div></div>
+          <form id="registerForm" novalidate>
+            <div class="field"><label for="regId">Número de identificación</label><input id="regId" name="identificacion" inputmode="numeric" placeholder="Ej. 1000000000" required><small class="field-hint">Dato demostrativo. No uses tu identificación real.</small></div>
+            <div class="field"><label for="regName">Nombre completo</label><input id="regName" name="nombre" autocomplete="off" placeholder="Nombre y apellidos de ejemplo" required></div>
+            <div class="field-row"><div class="field"><label for="regPhone">Celular</label><input id="regPhone" name="celular" type="tel" inputmode="tel" placeholder="300 000 0000" required></div><div class="field"><label for="regUser">Nombre de usuario</label><input id="regUser" name="usuario" autocomplete="off" placeholder="usuario_demo" required></div></div>
+            <div class="field-row"><div class="field"><label for="regPassword">Contraseña</label><input id="regPassword" name="contrasena" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required></div><div class="field"><label for="regConfirm">Confirmar contraseña</label><input id="regConfirm" name="confirmar" type="password" placeholder="Repite la contraseña" minlength="8" required></div></div>
+            <p class="privacy-note"><span>ⓘ</span> Prototipo local: los datos no se envían ni se guardan. Usa información ficticia.</p>
+            <div class="form-message" id="registerMessage" role="status" aria-live="polite"></div>
+            <button type="submit" class="btn btn-primary btn-full">Validar formulario <span>→</span></button>
+          </form>
+          <p class="form-switch">¿Ya tienes usuario? <button class="text-button" data-view="login">Ir a ingresar</button></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view inner-page" id="view-login" data-page="login">
+      <div class="auth-layout login-layout section-wrap">
+        <aside class="auth-aside"><div class="eyebrow">TU ESPACIO DIGITAL</div><h1>Qué bueno<br><span class="gradient-text">tenerte aquí.</span></h1><p>La futura plataforma permitirá a los clientes consultar su espacio personal de forma centralizada.</p><div class="login-mini-card"><span class="mini-card-icon">◈</span><div><small>EXPERIENCIA MI PLATA</small><strong>Tu plata, más cerca.</strong></div><span class="mini-arrow">↗</span></div></aside>
+        <div class="form-panel login-panel"><div class="form-heading"><div class="form-mark">M</div><div><h2>Inicia sesión</h2><p>Vista demostrativa de acceso al sistema.</p></div></div>
+          <form id="loginForm" novalidate>
+            <div class="field"><label for="loginUser">Nombre de usuario</label><div class="input-icon"><span>♙</span><input id="loginUser" name="usuario" autocomplete="off" placeholder="Ingresa un usuario ficticio" required></div></div>
+            <div class="field"><label for="loginPassword">Contraseña</label><div class="input-icon"><span>⌑</span><input id="loginPassword" name="contrasena" type="password" placeholder="Escribe una contraseña de prueba" required></div></div>
+            <div class="attempt-row"><span>Intentos de demostración</span><strong id="attemptCount">0 / 3</strong></div><div class="attempt-track"><span id="attemptBar"></span></div>
+            <div class="form-message" id="loginMessage" role="status" aria-live="polite"></div>
+            <button type="submit" class="btn btn-primary btn-full">Simular ingreso <span>→</span></button>
+            <button type="button" class="btn btn-subtle btn-full" data-view="dashboard">Ver panel de demostración</button>
+          </form>
+          <p class="form-switch">¿Todavía no tienes usuario? <button class="text-button" data-view="register">Crear cuenta</button></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view inner-page dashboard-page" id="view-dashboard" data-page="dashboard">
+      <div class="section-wrap">
+        <div class="dashboard-top"><div><div class="eyebrow">ESPACIO PERSONAL · DEMOSTRACIÓN</div><h1>Hola, <span class="gradient-text">Usuario Demo.</span></h1><p>Este resumen contiene datos inventados para ilustrar el panel.</p></div><span class="demo-pill"><span class="demo-dot"></span> DATOS FICTICIOS</span></div>
+        <div class="dashboard-grid">
+          <article class="balance-card"><div class="balance-top"><span>Saldo total de demostración</span><span class="balance-icon">◈</span></div><div class="balance-amount"><small>$</small> 4.580.000 <em>COP</em></div><div class="balance-foot"><span>Actualización ilustrativa</span><span>•••• 4829</span></div><div class="balance-glow"></div></article>
+          <article class="dashboard-note"><span class="note-icon">✦</span><div><h3>Todo a primera vista</h3><p>En una futura versión, aquí podrás consultar información real de los productos asociados a tu usuario.</p></div><span class="note-arrow">↗</span></article>
+        </div>
+        <div class="dashboard-section-head"><div><span class="eyebrow">TU PORTAFOLIO</span><h2>Mis productos</h2></div><button class="text-button" data-view="products">Ver todos <span>→</span></button></div>
+        <div class="account-grid">
+          <article class="account-card"><div class="account-card-head"><span class="product-symbol savings-symbol">◫</span><span class="status-tag">DEMO</span></div><p>Cuenta de ahorros</p><h3>•••• 1284</h3><div class="account-card-foot"><span>Saldo ilustrativo</span><strong>$ 3.200.000</strong></div></article>
+          <article class="account-card"><div class="account-card-head"><span class="product-symbol checking-symbol">⇄</span><span class="status-tag">DEMO</span></div><p>Cuenta corriente</p><h3>•••• 6621</h3><div class="account-card-foot"><span>Saldo ilustrativo</span><strong>$ 1.380.000</strong></div></article>
+          <article class="account-card credit-account"><div class="account-card-head"><span class="product-symbol credit-symbol">▱</span><span class="status-tag">DEMO</span></div><p>Tarjeta de crédito</p><h3>•••• 4829</h3><div class="account-card-foot"><span>Información ilustrativa</span><strong>Consultar</strong></div></article>
+        </div>
+        <div class="dashboard-section-head movement-head"><div><span class="eyebrow">ACTIVIDAD RECIENTE</span><h2>Últimos movimientos</h2></div><span class="muted-label">Ejemplos ficticios</span></div>
+        <div class="movement-list">
+          <div class="movement-row"><span class="movement-icon movement-in">↓</span><div class="movement-desc"><strong>Abono de ejemplo</strong><small>Cuenta de ahorros · 21 mar. 2026</small></div><strong class="movement-value positive">+$ 250.000</strong></div>
+          <div class="movement-row"><span class="movement-icon movement-out">↗</span><div class="movement-desc"><strong>Compra de ejemplo</strong><small>Tarjeta de crédito · 19 mar. 2026</small></div><strong class="movement-value">−$ 85.900</strong></div>
+          <div class="movement-row"><span class="movement-icon movement-in">↓</span><div class="movement-desc"><strong>Transferencia de ejemplo</strong><small>Cuenta corriente · 17 mar. 2026</small></div><strong class="movement-value positive">+$ 120.000</strong></div>
+        </div>
+        <p class="disclaimer-line">Estas tarjetas, saldos y transacciones son exclusivamente ilustrativos. No representan cuentas ni movimientos reales.</p>
+      </div>
+    </section>
+
+    <section class="page-view inner-page products-page" id="view-products" data-page="products">
+      <div class="section-wrap"><div class="products-intro"><div class="eyebrow">SOLUCIONES PARA TU DÍA A DÍA</div><h1>Productos pensados<br><span class="gradient-text">para cada momento.</span></h1><p>Conoce las categorías bancarias contempladas en la propuesta. Las condiciones comerciales aún no están definidas.</p></div>
+        <div class="products-grid">
+          <article class="product-detail savings-detail"><div class="product-detail-top"><span class="product-symbol savings-symbol">◫</span><span class="product-number">PRODUCTO 01</span></div><div class="product-illustration savings-illustration"><span class="illustration-orb"></span><div class="illustration-card"><span>MI PLATA</span><strong>AHORROS</strong><small>Tu futuro, paso a paso.</small></div></div><h2>Cuenta de ahorros</h2><p>Una cuenta pensada para separar y organizar el dinero destinado a tus metas.</p><ul><li>Visualización del saldo</li><li>Consulta de movimientos</li><li>Organización de tus ahorros</li></ul><button class="btn btn-outline btn-full" data-view="register">Me interesa <span>→</span></button></article>
+          <article class="product-detail checking-detail"><div class="product-detail-top"><span class="product-symbol checking-symbol">⇄</span><span class="product-number">PRODUCTO 02</span></div><div class="product-illustration checking-illustration"><span class="checking-ring"></span><div class="checking-lines"><i></i><i></i><i></i></div><div class="checking-chip">↗</div></div><h2>Cuenta corriente</h2><p>Una categoría de cuenta para gestionar fondos y movimientos según las reglas que se definan.</p><ul><li>Consulta de saldo y disponible</li><li>Seguimiento de movimientos</li><li>Información de la cuenta</li></ul><button class="btn btn-outline btn-full" data-view="register">Me interesa <span>→</span></button></article>
+          <article class="product-detail credit-detail"><div class="product-detail-top"><span class="product-symbol credit-symbol">▱</span><span class="product-number">PRODUCTO 03</span></div><div class="product-illustration credit-illustration"><div class="credit-card-art"><div class="credit-card-head"><span class="card-chip small-chip"><i></i><i></i><i></i><i></i></span><small>MI PLATA</small></div><div class="credit-dots">•••• &nbsp; •••• &nbsp; •••• &nbsp; 4829</div><div class="credit-card-bottom"><span>USUARIO DEMO</span><b>MP</b></div></div></div><h2>Tarjeta de crédito</h2><p>Un producto de crédito que, en la futura aplicación, podría mostrar cupo, deuda y movimientos.</p><ul><li>Visualización de cupo disponible</li><li>Consulta de consumos</li><li>Información general del producto</li></ul><button class="btn btn-outline btn-full" data-view="register">Me interesa <span>→</span></button></article>
+        </div><p class="disclaimer-line">Las descripciones son conceptuales. Tasas, comisiones, intereses, límites y requisitos están pendientes de confirmación académica.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-main"><a class="brand footer-brand" href="#inicio" data-view="home"><span class="brand-icon"><svg viewBox="0 0 28 28"><rect x="2" y="2" width="24" height="24" rx="8" fill="currentColor" opacity=".18"/><path d="M8 8h12v3H11v3h7v3h-7v3H8z" fill="currentColor"/><circle cx="20" cy="20" r="2" fill="#f04b7b"/></svg></span><span>MI <b>PLATA</b></span></a><p>Tu dinero, tu control. Sin límites.</p><div class="footer-links"><button data-view="home">Inicio</button><button data-view="products">Productos</button><button data-view="login">Ingresar</button><button data-view="register">Registrarse</button></div></div><div class="section-wrap footer-bottom"><span>© 2026 Mi Plata · Proyecto académico CESDE</span><span>Prototipo visual · No es un servicio bancario real</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
